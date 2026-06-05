@@ -1,0 +1,10 @@
+node_modules
+.next
+.env.local
+.env*.local
+*.zip
+.DS_Store
+.vercel
+.npm-cache
+.npm-cache
+public/images/originals

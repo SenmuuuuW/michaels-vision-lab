@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Privacy-safe playground slide angle placeholder">
+  <rect width="720" height="520" fill="#eee9df"/>
+  <polygon points="154,420 526,112 618,112 246,420" fill="#9a6f56"/>
+  <polygon points="246,420 618,112 662,146 306,420" fill="#b88b6b"/>
+  <line x1="526" y1="112" x2="526" y2="76" stroke="#6f7569" stroke-width="12" stroke-linecap="round"/>
+  <line x1="618" y1="112" x2="618" y2="76" stroke="#6f7569" stroke-width="12" stroke-linecap="round"/>
+  <g stroke="#6f7569" stroke-width="10" stroke-linecap="round" opacity=".76">
+    <path d="M127 420h466"/>
+    <path d="M202 420 526 112"/>
+  </g>
+  <path d="M94 356c90-46 175-55 255-27" fill="none" stroke="#b8b4aa" stroke-width="18" stroke-linecap="round" opacity=".75"/>
+</svg>

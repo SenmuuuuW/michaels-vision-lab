@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Privacy-safe rock texture placeholder">
+  <rect width="720" height="520" fill="#eee9df"/>
+  <path d="M96 372c-37-79 33-201 127-244 128-58 290-24 369 70 66 79 34 191-63 236-121 56-369 38-433-62z" fill="#b8b4aa"/>
+  <g fill="none" stroke="#6d6960" stroke-width="4" opacity=".55">
+    <path d="M166 321c92-52 183-57 285-30 47 13 79 3 112-32"/>
+    <path d="M162 238c68-34 138-39 206-17 76 25 128 20 178-14"/>
+    <path d="M229 379c40-38 90-56 150-52 50 4 89-8 116-37"/>
+    <path d="M220 166c35 41 77 56 126 41 54-16 92-10 129 23"/>
+  </g>
+  <g fill="#726f67" opacity=".55">
+    <circle cx="244" cy="281" r="10"/>
+    <circle cx="318" cy="192" r="7"/>
+    <circle cx="420" cy="350" r="11"/>
+    <circle cx="508" cy="247" r="8"/>
+    <circle cx="358" cy="283" r="6"/>
+  </g>
+</svg>

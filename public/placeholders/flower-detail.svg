@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Privacy-safe flower detail placeholder">
+  <rect width="720" height="520" fill="#f1ece2"/>
+  <circle cx="360" cy="260" r="68" fill="#9a6f56"/>
+  <g fill="#d5b7a4" opacity=".92">
+    <ellipse cx="360" cy="128" rx="58" ry="108"/>
+    <ellipse cx="360" cy="392" rx="58" ry="108"/>
+    <ellipse cx="228" cy="260" rx="108" ry="58"/>
+    <ellipse cx="492" cy="260" rx="108" ry="58"/>
+    <ellipse cx="268" cy="168" rx="54" ry="112" transform="rotate(-45 268 168)"/>
+    <ellipse cx="452" cy="168" rx="54" ry="112" transform="rotate(45 452 168)"/>
+    <ellipse cx="268" cy="352" rx="54" ry="112" transform="rotate(45 268 352)"/>
+    <ellipse cx="452" cy="352" rx="54" ry="112" transform="rotate(-45 452 352)"/>
+  </g>
+  <circle cx="360" cy="260" r="38" fill="#6f7569"/>
+  <g fill="#f8f4eb" opacity=".75">
+    <circle cx="346" cy="248" r="5"/>
+    <circle cx="370" cy="243" r="4"/>
+    <circle cx="378" cy="268" r="6"/>
+    <circle cx="352" cy="276" r="5"/>
+  </g>
+</svg>

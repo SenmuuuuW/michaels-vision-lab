@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Privacy-safe view through a hole placeholder">
+  <rect width="720" height="520" fill="#6b675f"/>
+  <circle cx="360" cy="260" r="178" fill="#f8f4eb"/>
+  <circle cx="360" cy="260" r="144" fill="#d9d3c6"/>
+  <path d="M225 314c79-83 176-110 291-71" fill="none" stroke="#6f7569" stroke-width="28" stroke-linecap="round"/>
+  <path d="M238 290c47-25 92-34 135-26 52 9 91 2 118-28" fill="none" stroke="#9a6f56" stroke-width="10" stroke-linecap="round" opacity=".76"/>
+  <circle cx="514" cy="170" r="34" fill="#f1ece2" opacity=".9"/>
+  <circle cx="360" cy="260" r="178" fill="none" stroke="#262523" stroke-width="38" opacity=".72"/>
+</svg>

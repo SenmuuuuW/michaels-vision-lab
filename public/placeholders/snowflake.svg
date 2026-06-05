@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Privacy-safe snowflake placeholder">
+  <rect width="720" height="520" fill="#eee9df"/>
+  <rect x="52" y="48" width="616" height="424" fill="#d8d4ca" stroke="#999287" stroke-width="2"/>
+  <g stroke="#6f7569" stroke-width="10" stroke-linecap="round" opacity=".86">
+    <path d="M360 118v284M238 190l244 140M482 190 238 330"/>
+  </g>
+  <g stroke="#9a6f56" stroke-width="5" stroke-linecap="round" opacity=".72">
+    <path d="M360 118 326 156M360 118l34 38M360 402l-34-38M360 402l34-38"/>
+    <path d="M238 190l52-13M238 190l17 50M482 330l-52 13M482 330l-17-50"/>
+    <path d="M482 190l-17 50M482 190l-52-13M238 330l17-50M238 330l52 13"/>
+  </g>
+  <circle cx="360" cy="260" r="28" fill="#f8f4eb" stroke="#6f7569" stroke-width="5"/>
+</svg>
