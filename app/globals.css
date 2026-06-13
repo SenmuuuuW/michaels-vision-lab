@@ -419,20 +419,32 @@ blockquote {
 }
 
 .home-archive-strip {
-  display: flex;
-  gap: 16px;
   margin-left: calc(clamp(20px, 4vw, 56px) * -1);
   margin-right: calc(clamp(20px, 4vw, 56px) * -1);
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 0 clamp(20px, 4vw, 56px) 16px;
   scroll-padding-left: clamp(20px, 4vw, 56px);
   scroll-snap-type: x proximity;
 }
 
+.archive-marquee-track {
+  animation: archive-marquee 95s linear infinite;
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.home-archive-strip:hover .archive-marquee-track,
+.home-archive-strip:focus .archive-marquee-track,
+.home-archive-strip:focus-within .archive-marquee-track {
+  animation-play-state: paused;
+}
+
 .archive-strip-item {
   background: var(--paper);
   border: 1px solid var(--line);
-  flex: 0 0 clamp(220px, 24vw, 310px);
+  flex: 0 0 clamp(210px, 20vw, 280px);
   margin: 0;
   scroll-snap-align: start;
 }
@@ -450,6 +462,22 @@ blockquote {
   font-size: 0.76rem;
   line-height: 1.35;
   padding: 10px 12px;
+}
+
+@keyframes archive-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-marquee-track {
+    animation: none;
+  }
 }
 
 .leaps-line-section {

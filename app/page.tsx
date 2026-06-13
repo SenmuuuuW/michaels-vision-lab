@@ -28,42 +28,118 @@ const questions = [
 
 const archiveStripImages = [
   {
-    label: "Eli's snowflake",
-    image: "/images/through-their-eyes/eli-snowflake.jpg"
-  },
-  {
-    label: "Owen's rock texture",
-    image: "/images/through-their-eyes/owen-rock-texture.jpg"
-  },
-  {
     label: "Aviva's flower detail",
-    image: "/images/through-their-eyes/aviva-flower-detail.jpg"
+    image: "/images/through-their-eyes/aviva-flower-detail.jpg",
+    alt: "Child-led photograph of flowers from Through Their Eyes."
   },
   {
-    label: "Manola's slide angle",
-    image: "/images/through-their-eyes/manola-slide-angle.jpg"
+    label: "Beatrice booklet image",
+    image: "/images/through-their-eyes/beatrice-booklet.jpg",
+    alt: "Booklet photograph from Beatrice's Through Their Eyes page."
+  },
+  {
+    label: "Birdie's through-the-hole view",
+    image: "/images/through-their-eyes/birdie-hole-view.jpg",
+    alt: "Child-led photograph looking through blue playground holes."
   },
   {
     label: "Dallas booklet image",
-    image: "/images/through-their-eyes/dallas-booklet.jpg"
+    image: "/images/through-their-eyes/dallas-booklet.jpg",
+    alt: "Booklet photograph from Dallas's Through Their Eyes page."
+  },
+  {
+    label: "Eli's snowflake",
+    image: "/images/through-their-eyes/eli-snowflake.jpg",
+    alt: "Child-led photograph of a snowflake in a hand."
   },
   {
     label: "Gemma booklet image",
-    image: "/images/through-their-eyes/gemma-booklet.jpg"
+    image: "/images/through-their-eyes/gemma-booklet.jpg",
+    alt: "Booklet photograph from Gemma's Through Their Eyes page."
   },
   {
     label: "Hamilton booklet image",
-    image: "/images/through-their-eyes/hamilton-booklet.jpg"
+    image: "/images/through-their-eyes/hamilton-booklet.jpg",
+    alt: "Booklet photograph from Hamilton's Through Their Eyes page."
+  },
+  {
+    label: "Jojo booklet image",
+    image: "/images/through-their-eyes/jojo-booklet.jpg",
+    alt: "Booklet photograph from Jojo's Through Their Eyes page."
   },
   {
     label: "Juju booklet image",
-    image: "/images/through-their-eyes/juju-booklet.jpg"
+    image: "/images/through-their-eyes/juju-booklet.jpg",
+    alt: "Booklet photograph from Juju's Through Their Eyes page."
+  },
+  {
+    label: "Maebel booklet image",
+    image: "/images/through-their-eyes/maebel-booklet.jpg",
+    alt: "Booklet photograph from Maebel's Through Their Eyes page."
+  },
+  {
+    label: "Manola's slide angle",
+    image: "/images/through-their-eyes/manola-slide-angle.jpg",
+    alt: "Child-led photograph of blue playground slides."
+  },
+  {
+    label: "Maxine booklet image",
+    image: "/images/through-their-eyes/maxine-booklet.jpg",
+    alt: "Booklet photograph from Maxine's Through Their Eyes page."
+  },
+  {
+    label: "Oriana booklet image",
+    image: "/images/through-their-eyes/oriana-booklet.jpg",
+    alt: "Booklet photograph from Oriana's Through Their Eyes page."
+  },
+  {
+    label: "Otis booklet image",
+    image: "/images/through-their-eyes/otis-booklet.jpg",
+    alt: "Booklet photograph from Otis's Through Their Eyes page."
+  },
+  {
+    label: "Owen's rock texture",
+    image: "/images/through-their-eyes/owen-rock-texture.jpg",
+    alt: "Child-led close-up photograph of a textured rock."
+  },
+  {
+    label: "Precious booklet image",
+    image: "/images/through-their-eyes/precious-booklet.jpg",
+    alt: "Booklet photograph from Precious's Through Their Eyes page."
+  },
+  {
+    label: "Rissah booklet image",
+    image: "/images/through-their-eyes/rissah-booklet.jpg",
+    alt: "Booklet photograph from Rissah's Through Their Eyes page."
+  },
+  {
+    label: "Tempe booklet image",
+    image: "/images/through-their-eyes/tempe-booklet.jpg",
+    alt: "Booklet photograph from Tempe's Through Their Eyes page."
+  },
+  {
+    label: "Thea booklet image",
+    image: "/images/through-their-eyes/thea-booklet.jpg",
+    alt: "Booklet photograph from Thea's Through Their Eyes page."
+  },
+  {
+    label: "Vaela booklet image",
+    image: "/images/through-their-eyes/vaela-booklet.jpg",
+    alt: "Booklet photograph from Vaela's Through Their Eyes page."
+  },
+  {
+    label: "Willis booklet image",
+    image: "/images/through-their-eyes/willis-booklet.jpg",
+    alt: "Booklet photograph from Willis's Through Their Eyes page."
   },
   {
     label: "Yara booklet image",
-    image: "/images/through-their-eyes/yara-booklet.jpg"
+    image: "/images/through-their-eyes/yara-booklet.jpg",
+    alt: "Booklet photograph from Yara's Through Their Eyes page."
   }
 ];
+
+const archiveMarqueeImages = [...archiveStripImages, ...archiveStripImages];
 
 export default function Home() {
   return (
@@ -134,13 +210,33 @@ export default function Home() {
           </div>
           <p>A scrolling strip of selected child-led photographs from Through Their Eyes.</p>
         </div>
-        <div className="home-archive-strip" aria-label="Levey Day School image archive">
-          {archiveStripImages.map((item) => (
-            <figure className="archive-strip-item" key={item.image}>
-              <Image src={item.image} alt="" width={360} height={260} sizes="(max-width: 720px) 72vw, 280px" />
-              <figcaption>{item.label}</figcaption>
-            </figure>
-          ))}
+        <div
+          className="home-archive-strip"
+          aria-label="Levey Day School image archive"
+          tabIndex={0}
+        >
+          <div className="archive-marquee-track">
+            {archiveMarqueeImages.map((item, index) => {
+              const isDuplicate = index >= archiveStripImages.length;
+
+              return (
+                <figure
+                  aria-hidden={isDuplicate}
+                  className="archive-strip-item"
+                  key={`${item.image}-${index}`}
+                >
+                  <Image
+                    src={item.image}
+                    alt={isDuplicate ? "" : item.alt}
+                    width={360}
+                    height={260}
+                    sizes="(max-width: 720px) 68vw, 260px"
+                  />
+                  <figcaption>{item.label}</figcaption>
+                </figure>
+              );
+            })}
+          </div>
         </div>
       </section>
 
