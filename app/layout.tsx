@@ -39,6 +39,7 @@ export default function RootLayout({
         <footer className="site-footer">
           <p>Personal visual research archive for Michael Wang.</p>
           <p>Child-led photography, visual storytelling, and ethical ways of seeing.</p>
+          <p>Work in progress · Stage review version · June 2026</p>
         </footer>
       </body>
     </html>
