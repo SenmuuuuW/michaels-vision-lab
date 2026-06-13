@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const focusAreas = [
@@ -21,7 +22,46 @@ const questions = [
   {
     title: "AI and human meaning",
     text: "What can machines name, and what do children explain?",
-    image: "/images/through-their-eyes/birdie-hole-view.jpg"
+    image: "/images/through-their-eyes/owen-rock-texture.jpg"
+  }
+];
+
+const archiveStripImages = [
+  {
+    label: "Eli's snowflake",
+    image: "/images/through-their-eyes/eli-snowflake.jpg"
+  },
+  {
+    label: "Owen's rock texture",
+    image: "/images/through-their-eyes/owen-rock-texture.jpg"
+  },
+  {
+    label: "Aviva's flower detail",
+    image: "/images/through-their-eyes/aviva-flower-detail.jpg"
+  },
+  {
+    label: "Manola's slide angle",
+    image: "/images/through-their-eyes/manola-slide-angle.jpg"
+  },
+  {
+    label: "Dallas booklet image",
+    image: "/images/through-their-eyes/dallas-booklet.jpg"
+  },
+  {
+    label: "Gemma booklet image",
+    image: "/images/through-their-eyes/gemma-booklet.jpg"
+  },
+  {
+    label: "Hamilton booklet image",
+    image: "/images/through-their-eyes/hamilton-booklet.jpg"
+  },
+  {
+    label: "Juju booklet image",
+    image: "/images/through-their-eyes/juju-booklet.jpg"
+  },
+  {
+    label: "Yara booklet image",
+    image: "/images/through-their-eyes/yara-booklet.jpg"
   }
 ];
 
@@ -82,6 +122,25 @@ export default function Home() {
           <Link className="text-link" href="/through-their-eyes">
             View Through Their Eyes
           </Link>
+        </div>
+      </section>
+
+      {/* 横向图像档案：只提供视觉浏览，不重复案例文字。 */}
+      <section className="page-section wide-section home-archive-strip-section">
+        <div className="strip-heading">
+          <div>
+            <p className="kicker">Through Their Eyes</p>
+            <h2>Levey Day School image archive</h2>
+          </div>
+          <p>A scrolling strip of selected child-led photographs from Through Their Eyes.</p>
+        </div>
+        <div className="home-archive-strip" aria-label="Levey Day School image archive">
+          {archiveStripImages.map((item) => (
+            <figure className="archive-strip-item" key={item.image}>
+              <Image src={item.image} alt="" width={360} height={260} sizes="(max-width: 720px) 72vw, 280px" />
+              <figcaption>{item.label}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
