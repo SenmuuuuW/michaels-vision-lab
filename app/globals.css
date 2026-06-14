@@ -32,6 +32,18 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+.home-archive-strip:focus-visible {
+  outline: 2px solid rgba(154, 111, 86, 0.72);
+  outline-offset: 5px;
+}
+
+.text-link:focus-visible,
+.subtle-link:focus-visible,
+.nav-dropdown a:focus-visible {
+  border-bottom-color: var(--charcoal);
+}
+
 img {
   display: block;
   height: auto;
@@ -946,6 +958,21 @@ blockquote {
 
 .full-gallery-section {
   border-bottom: 1px solid var(--line);
+}
+
+.archive-divider-note {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  padding-bottom: clamp(30px, 4vw, 46px);
+  padding-top: clamp(30px, 4vw, 46px);
+}
+
+.archive-divider-note p:not(.kicker) {
+  color: var(--charcoal);
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 860px;
 }
 
 .privacy-note {

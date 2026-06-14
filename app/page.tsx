@@ -12,17 +12,20 @@ const questions = [
   {
     title: "Child-led photography",
     text: "What changes when children hold the camera?",
-    image: "/images/through-their-eyes/manola-slide-angle.jpg"
+    image: "/images/through-their-eyes/manola-slide-angle.jpg",
+    alt: "Blue playground slides photographed from a child's chosen angle."
   },
   {
     title: "Ethical visual storytelling",
     text: "How can schools tell stories while protecting privacy?",
-    image: "/images/through-their-eyes/aviva-flower-detail.jpg"
+    image: "/images/through-their-eyes/aviva-flower-detail.jpg",
+    alt: "Flowers from the Levey Day School photography project."
   },
   {
     title: "AI and human meaning",
     text: "What can machines name, and what do children explain?",
-    image: "/images/through-their-eyes/owen-rock-texture.jpg"
+    image: "/images/through-their-eyes/owen-rock-texture.jpg",
+    alt: "Close view of a textured rock chosen by a child photographer."
   }
 ];
 
@@ -184,7 +187,10 @@ export default function Home() {
       {/* 左图右文：用真实项目建立档案的第一个入口。 */}
       <section className="page-section wide-section editorial-pair">
         <figure className="pair-image">
-          <img src="/images/through-their-eyes/eli-snowflake.jpg" alt="" />
+          <img
+            src="/images/through-their-eyes/eli-snowflake.jpg"
+            alt="Snowflake resting in Eli's hand during the Levey project."
+          />
           <figcaption>Eli's snowflake photograph, Through Their Eyes.</figcaption>
         </figure>
         <div className="pair-copy">
@@ -252,8 +258,14 @@ export default function Home() {
           </p>
         </div>
         <figure className="pair-image image-strip">
-          <img src="/images/through-their-eyes/birdie-hole-view.jpg" alt="" />
-          <img src="/images/through-their-eyes/owen-rock-texture.jpg" alt="" />
+          <img
+            src="/images/through-their-eyes/birdie-hole-view.jpg"
+            alt="Birdie's view through circular blue playground openings."
+          />
+          <img
+            src="/images/through-their-eyes/owen-rock-texture.jpg"
+            alt="Close view of the rock texture Owen chose to photograph."
+          />
           <figcaption>Two project images: a through-the-hole view and a rock texture.</figcaption>
         </figure>
       </section>
@@ -267,7 +279,7 @@ export default function Home() {
         <div className="lens-grid">
           {questions.map((question) => (
             <article className="lens-item" key={question.title}>
-              <img src={question.image} alt="" />
+              <img src={question.image} alt={question.alt} />
               <span>{question.title}</span>
               <p>{question.text}</p>
             </article>

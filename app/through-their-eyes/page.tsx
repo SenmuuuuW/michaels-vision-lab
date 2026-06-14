@@ -47,6 +47,7 @@ const cases = [
     participant: "Eli",
     age: "Age 7",
     image: "/images/through-their-eyes/eli-snowflake.jpg",
+    alt: "Snowflake resting in Eli's hand during the Levey project.",
     caption: "Project photograph from the booklet draft.",
     story: "Eli noticed that each snowflake is different and has its own personality.",
     future:
@@ -59,6 +60,7 @@ const cases = [
     participant: "Owen",
     age: "Age 6",
     image: "/images/through-their-eyes/owen-rock-texture.jpg",
+    alt: "Close view of the rock texture Owen chose to photograph.",
     caption: "Project photograph from the booklet draft.",
     story: "Owen noticed a black mark, a hard surface, and something mini inside a big rock.",
     future: "A robot could take it and might like it enough to keep it.",
@@ -70,6 +72,7 @@ const cases = [
     participant: "Aviva",
     age: "Age 5",
     image: "/images/through-their-eyes/aviva-flower-detail.jpg",
+    alt: "Flowers Aviva photographed for their color and beauty.",
     caption: "Project photograph from the booklet draft.",
     story: "Aviva photographed flowers for their color, beauty, and prettiness.",
     future: "A robot could take the picture and might feel happy for her.",
@@ -81,6 +84,7 @@ const cases = [
     participant: "Manola",
     age: "Age 4",
     image: "/images/through-their-eyes/manola-slide-angle.jpg",
+    alt: "Blue playground slides photographed from Manola's chosen angle.",
     caption: "Project photograph from the booklet draft.",
     story:
       "Manola chose the blue slide, especially the middle slide, because it lets her go up in the air.",
@@ -94,6 +98,7 @@ const cases = [
     participant: "Birdie",
     age: "Age 5",
     image: "/images/through-their-eyes/birdie-hole-view.jpg",
+    alt: "Birdie's view through circular blue playground openings.",
     caption: "Project photograph from the booklet draft.",
     story: "Birdie noticed color, closeness, and the view through small holes.",
     future:
@@ -189,6 +194,7 @@ const fullGallery = [
     name: "Aviva",
     age: "Age 5",
     image: "/images/through-their-eyes/aviva-flower-detail.jpg",
+    alt: "Flowers Aviva photographed for their color and beauty.",
     story: "Aviva photographed flowers for their color, beauty, and prettiness.",
     future: "She imagined a robot could take the picture and might feel happy for her."
   },
@@ -196,6 +202,7 @@ const fullGallery = [
     name: "Birdie",
     age: "Age 5",
     image: "/images/through-their-eyes/birdie-hole-view.jpg",
+    alt: "Birdie's close view through circular blue playground openings.",
     story: "Birdie photographed color, closeness, and the view through small holes.",
     future:
       "She thought robots could zoom close, but might not feel happiness in the same way."
@@ -204,6 +211,7 @@ const fullGallery = [
     name: "Dallas",
     age: "Age 6",
     image: "/images/through-their-eyes/dallas-booklet.jpg",
+    alt: "Dallas's selected booklet photograph from the school project.",
     story: "Dallas chose the image because it felt beautiful, cool, and awesome.",
     future:
       "Dallas was unsure, but imagined robots might love beautiful things and the playground."
@@ -212,6 +220,7 @@ const fullGallery = [
     name: "Eli",
     age: "Age 7",
     image: "/images/through-their-eyes/eli-snowflake.jpg",
+    alt: "Snowflake resting in Eli's hand during the Levey project.",
     story: "Eli photographed snow because each snowflake felt different and individual.",
     future:
       "He said a robot could photograph snow, but not the exact snow from that exact moment."
@@ -220,6 +229,7 @@ const fullGallery = [
     name: "Gemma",
     age: "Age 7",
     image: "/images/through-their-eyes/gemma-booklet.jpg",
+    alt: "Gemma's booklet photograph showing plants, shadow, and sunlight.",
     story: "Gemma noticed plants, shadow, and sunlight on the rock.",
     future: "She was unsure, but thought a robot might like the image."
   },
@@ -227,6 +237,7 @@ const fullGallery = [
     name: "Hamilton",
     age: "Age 5",
     image: "/images/through-their-eyes/hamilton-booklet.jpg",
+    alt: "Hamilton's selected booklet photograph from the school project.",
     story:
       "Hamilton connected red and brown to favorite colors and favorite foods.",
     future: "Hamilton imagined the robot could take it and like the red."
@@ -235,6 +246,7 @@ const fullGallery = [
     name: "Jojo",
     age: "Age 4",
     image: "/images/through-their-eyes/jojo-booklet.jpg",
+    alt: "Jojo's booklet photograph connected to plants and care for the Earth.",
     story:
       "Jojo photographed a favorite subject connected to plants, food, beauty, and helping the Earth.",
     future: "Jojo imagined a robot could take the picture and like the image made by the child."
@@ -243,6 +255,7 @@ const fullGallery = [
     name: "Juju",
     age: "Age 4",
     image: "/images/through-their-eyes/juju-booklet.jpg",
+    alt: "Juju's booklet photograph of flowers and color.",
     story:
       "Juju photographed flowers for their colors and the beautiful smell she wanted to keep noticing.",
     future:
@@ -252,6 +265,7 @@ const fullGallery = [
     name: "Manola",
     age: "Age 4",
     image: "/images/through-their-eyes/manola-slide-angle.jpg",
+    alt: "Blue playground slides photographed from Manola's chosen angle.",
     story:
       "Manola photographed the blue slide, especially the middle slide, because it lets her go up in the air.",
     future:
@@ -261,6 +275,7 @@ const fullGallery = [
     name: "Maebel",
     age: "Age 6",
     image: "/images/through-their-eyes/maebel-booklet.jpg",
+    alt: "Maebel's booklet photograph of a sparkly rainbow-like detail.",
     story:
       "Maebel photographed sparkly, rainbow-like detail that reminded her of a butterfly kite.",
     future:
@@ -270,6 +285,7 @@ const fullGallery = [
     name: "Oriana",
     age: "Age 5",
     image: "/images/through-their-eyes/oriana-booklet.jpg",
+    alt: "Oriana's booklet photograph of the blue slide.",
     story: "Oriana photographed the slide because it was beautiful and blue.",
     future: "She thought a robot could take the picture and feel happy."
   },
@@ -277,6 +293,7 @@ const fullGallery = [
     name: "Owen",
     age: "Age 6",
     image: "/images/through-their-eyes/owen-rock-texture.jpg",
+    alt: "Close view of the rock texture Owen chose to photograph.",
     story:
       "Owen noticed a black mark on a hard rock and something very mini inside something big.",
     future: "He thought a robot could take it and might like it enough to keep it."
@@ -285,6 +302,7 @@ const fullGallery = [
     name: "Precious",
     age: "Age 4",
     image: "/images/through-their-eyes/precious-booklet.jpg",
+    alt: "Precious's booklet photograph of favorite colors.",
     story: "Precious photographed colors because they were all favorite colors.",
     future:
       "Precious thought robots would not know where the school is, but might feel happy if they liked the colors."
@@ -293,6 +311,7 @@ const fullGallery = [
     name: "Rissah",
     age: "Age 8",
     image: "/images/through-their-eyes/rissah-booklet.jpg",
+    alt: "Rissah's booklet photograph of the sky and outside scene.",
     story:
       "Rissah photographed the sky, faraway things, and the whole outside scene.",
     future:
@@ -302,6 +321,7 @@ const fullGallery = [
     name: "Tempe",
     age: "Age 9",
     image: "/images/through-their-eyes/tempe-booklet.jpg",
+    alt: "Tempe's booklet photograph of a beautiful detailed subject.",
     story:
       "Tempe photographed something beautiful and detailed, connected to a favorite color.",
     future: "Tempe thought a robot probably could take it and feel happy because it was beautiful."
@@ -310,6 +330,7 @@ const fullGallery = [
     name: "Thea",
     age: "Age 4",
     image: "/images/through-their-eyes/thea-booklet.jpg",
+    alt: "Thea's booklet photograph with a log, table, and gate.",
     story:
       "Thea noticed a log, a table that looked like a mushroom, and a gate in the background.",
     future:
@@ -319,6 +340,7 @@ const fullGallery = [
     name: "Vaela",
     age: "Age 3",
     image: "/images/through-their-eyes/vaela-booklet.jpg",
+    alt: "Vaela's booklet photograph of a rock she liked.",
     story: "Vaela photographed the rock because she liked it.",
     future:
       "Vaela did not think a robot could take the same picture, but imagined a robot might like rocks."
@@ -327,6 +349,7 @@ const fullGallery = [
     name: "Willis",
     age: "Age 5",
     image: "/images/through-their-eyes/willis-booklet.jpg",
+    alt: "Willis's booklet photograph connected to color and numbers.",
     story:
       "Willis noticed white, color, and a personal connection to favorite numbers.",
     future:
@@ -336,6 +359,7 @@ const fullGallery = [
     name: "Yara",
     age: "Age 4",
     image: "/images/through-their-eyes/yara-booklet.jpg",
+    alt: "Yara's booklet photograph of stones and the outdoor memorial.",
     story:
       "Yara photographed the outside, the stones, and the memorial because she loved them.",
     future:
@@ -462,7 +486,7 @@ export default function ThroughTheirEyesPage() {
         <div className="case-grid">
           {cases.map((item) => (
             <article className="case-card" key={item.title}>
-              <Image src={item.image} alt="" width={720} height={520} />
+              <Image src={item.image} alt={item.alt} width={720} height={520} />
               <div className="case-body">
                 <p className="caption">{item.caption}</p>
                 <p className="participant-line">
@@ -489,6 +513,15 @@ export default function ThroughTheirEyesPage() {
         </div>
       </section>
 
+      {/* 完整画廊提示：在深度案例和完整档案之间建立阅读转场。 */}
+      <section className="page-section wide-section archive-divider-note">
+        <p className="kicker">Entering the full archive</p>
+        <p>
+          The featured cases above introduce the method; the full gallery below preserves
+          the broader set of child-led photographs and short explanations.
+        </p>
+      </section>
+
       {/* 完整画廊：保留研究案例的深度，同时让访客浏览全部儿童摄影页。 */}
       <section className="page-section wide-section full-gallery-section">
         <div className="section-heading">
@@ -507,7 +540,7 @@ export default function ThroughTheirEyesPage() {
         <div className="full-gallery-grid">
           {fullGallery.map((item) => (
             <article className="gallery-card" key={item.name}>
-              <Image src={item.image} alt="" width={520} height={360} />
+              <Image src={item.image} alt={item.alt} width={520} height={360} />
               <div className="gallery-card-body">
                 <p className="participant-line">
                   {item.name} · {item.age}
