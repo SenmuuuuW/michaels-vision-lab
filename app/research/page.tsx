@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const projectCards = [
@@ -27,6 +28,25 @@ const articles = [
   "Adult Reflections on AI and Childhood"
 ];
 
+const researchMap = [
+  {
+    label: "Completed Project",
+    text: "Through Their Eyes anchors the archive with fieldwork, interviews, adult reflections, and a booklet draft."
+  },
+  {
+    label: "Upcoming Fieldwork",
+    text: "The Guizhou Echo remains planned until new material is collected, reviewed, and edited."
+  },
+  {
+    label: "Method",
+    text: "Child-led image making, photo reflection interviews, and careful public-facing selection."
+  },
+  {
+    label: "Ethics",
+    text: "Consent, privacy, first-name use, and no identifiable child images without permission."
+  }
+];
+
 export default function ResearchPage() {
   return (
     <>
@@ -40,6 +60,22 @@ export default function ResearchPage() {
         </p>
       </section>
 
+      {/* 研究地图：让页面像项目档案总览，而不是普通卡片列表。 */}
+      <section className="page-section wide-section research-map-section">
+        <div>
+          <p className="kicker">Research Map</p>
+          <h2>One completed field phase, one planned extension.</h2>
+        </div>
+        <div className="research-map-grid">
+          {researchMap.map((item) => (
+            <article className="research-map-item" key={item.label}>
+              <span>{item.label}</span>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* 项目卡片：Research 成为主入口，Through Their Eyes 放在这里归类。 */}
       <section className="page-section wide-section project-hub-grid">
         {projectCards.map((project) => (
@@ -48,7 +84,13 @@ export default function ResearchPage() {
             id={project.title === "The Guizhou Echo" ? "guizhou-echo" : undefined}
             key={project.title}
           >
-            <img src={project.image} alt="" />
+            <Image
+              src={project.image}
+              alt=""
+              width={720}
+              height={520}
+              sizes={project.featured ? "(max-width: 980px) 50vw, 38vw" : "(max-width: 980px) 50vw, 28vw"}
+            />
             <div className="project-hub-body">
               <span className="status-label">{project.status}</span>
               <h2>{project.title}</h2>

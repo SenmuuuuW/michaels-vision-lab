@@ -148,7 +148,7 @@ export default function Home() {
   return (
     <>
       {/* 首页英雄区：先说明整体档案方向，再给出真实项目入口。 */}
-      <section className="hero page-section wide-section">
+      <section className="hero page-section wide-section museum-hero">
         <div className="hero-copy">
           <p className="kicker">Personal Visual Research Archive</p>
           <h1>Michael's Vision Lab</h1>
@@ -168,12 +168,36 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <figure className="hero-visual" aria-label="Abstract archive table with printed photographs">
-          <div className="print print-one" />
-          <div className="print print-two" />
-          <div className="print print-three" />
-          <figcaption>Field notes, child photographs, and booklet drafts.</figcaption>
-        </figure>
+        <div className="hero-photo-board" aria-label="Selected photographs from the archive">
+          <figure className="hero-photo hero-photo-primary">
+            <Image
+              src="/images/through-their-eyes/eli-snowflake.jpg"
+              alt="Snowflake resting in Eli's hand during the Levey project."
+              width={760}
+              height={560}
+              priority
+            />
+            <figcaption>Eli's snowflake, March 2026.</figcaption>
+          </figure>
+          <figure className="hero-photo hero-photo-secondary">
+            <Image
+              src="/images/through-their-eyes/manola-slide-angle.jpg"
+              alt="Blue playground slides photographed from Manola's chosen angle."
+              width={420}
+              height={320}
+            />
+            <figcaption>Playground view, child height.</figcaption>
+          </figure>
+          <figure className="hero-photo hero-photo-tertiary">
+            <Image
+              src="/images/through-their-eyes/owen-rock-texture.jpg"
+              alt="Close view of the rock texture Owen chose to photograph."
+              width={360}
+              height={280}
+            />
+            <figcaption>Texture study.</figcaption>
+          </figure>
+        </div>
       </section>
 
       {/* LEAPS 式叙事：自然说明从观察到方法、从项目到延展。 */}
@@ -187,9 +211,12 @@ export default function Home() {
       {/* 左图右文：用真实项目建立档案的第一个入口。 */}
       <section className="page-section wide-section editorial-pair">
         <figure className="pair-image">
-          <img
+          <Image
             src="/images/through-their-eyes/eli-snowflake.jpg"
             alt="Snowflake resting in Eli's hand during the Levey project."
+            width={720}
+            height={520}
+            sizes="(max-width: 980px) 100vw, 48vw"
           />
           <figcaption>Eli's snowflake photograph, Through Their Eyes.</figcaption>
         </figure>
@@ -258,13 +285,19 @@ export default function Home() {
           </p>
         </div>
         <figure className="pair-image image-strip">
-          <img
+          <Image
             src="/images/through-their-eyes/birdie-hole-view.jpg"
             alt="Birdie's view through circular blue playground openings."
+            width={520}
+            height={390}
+            sizes="(max-width: 980px) 50vw, 24vw"
           />
-          <img
+          <Image
             src="/images/through-their-eyes/owen-rock-texture.jpg"
             alt="Close view of the rock texture Owen chose to photograph."
+            width={520}
+            height={390}
+            sizes="(max-width: 980px) 50vw, 24vw"
           />
           <figcaption>Two project images: a through-the-hole view and a rock texture.</figcaption>
         </figure>
@@ -279,7 +312,13 @@ export default function Home() {
         <div className="lens-grid">
           {questions.map((question) => (
             <article className="lens-item" key={question.title}>
-              <img src={question.image} alt={question.alt} />
+              <Image
+                src={question.image}
+                alt={question.alt}
+                width={520}
+                height={340}
+                sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 31vw"
+              />
               <span>{question.title}</span>
               <p>{question.text}</p>
             </article>

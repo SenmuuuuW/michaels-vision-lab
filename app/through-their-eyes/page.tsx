@@ -382,12 +382,24 @@ export default function ThroughTheirEyesPage() {
     <>
       {/* 项目页标题：清楚说明 Levey 项目已经完成。 */}
       <section className="page-hero page-section wide-section through-hero">
-        <p className="kicker">Completed Project · Levey Day School</p>
-        <h1>Through Their Eyes</h1>
-        <p>
-          In March 2026, Michael gave cameras to 21 preschool children and asked what
-          they wanted to show.
-        </p>
+        <div>
+          <p className="kicker">Completed Project · Levey Day School</p>
+          <h1>Through Their Eyes</h1>
+          <p>
+            In March 2026, Michael gave cameras to 21 preschool children and asked what
+            they wanted to show.
+          </p>
+        </div>
+        <figure className="through-hero-image">
+          <Image
+            src="/images/through-their-eyes/birdie-hole-view.jpg"
+            alt="Birdie's view through circular blue playground openings."
+            width={720}
+            height={540}
+            priority
+          />
+          <figcaption>Selected project image from the Levey Day School archive.</figcaption>
+        </figure>
       </section>
 
       {/* 页面索引：用轻量目录建立田野档案的章节节奏。 */}
@@ -418,7 +430,13 @@ export default function ThroughTheirEyesPage() {
           </div>
         </div>
         <figure className="dimension-visual">
-          <img src="/images/through-their-eyes/aviva-flower-detail.jpg" alt="" />
+          <Image
+            src="/images/through-their-eyes/aviva-flower-detail.jpg"
+            alt=""
+            width={720}
+            height={520}
+            sizes="(max-width: 980px) 100vw, 48vw"
+          />
           <figcaption>Project dimensions</figcaption>
           <div className="dimension-labels">
             {projectDimensions.map((dimension) => (

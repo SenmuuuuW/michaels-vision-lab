@@ -16,6 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
         {/* 顶部导航：保持安静、清晰，像研究档案的目录。 */}
         <header className="site-header">
           <Link className="brand" href="/" aria-label="Michael's Vision Lab home">
@@ -34,7 +37,7 @@ export default function RootLayout({
             <Link href="/about">About Me</Link>
           </nav>
         </header>
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         {/* 页脚：强调这是静态研究档案，而非产品平台。 */}
         <footer className="site-footer">
           <p>Personal visual research archive for Michael Wang.</p>
