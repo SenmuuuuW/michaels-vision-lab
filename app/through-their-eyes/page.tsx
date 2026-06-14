@@ -41,6 +41,16 @@ const projectDimensions = [
   "Privacy and consent"
 ];
 
+const archiveSections = [
+  "Method",
+  "Questions",
+  "Featured cases",
+  "Full gallery",
+  "Reflections",
+  "Booklet",
+  "Next"
+];
+
 const cases = [
   {
     title: "Eli's Snowflake",
@@ -371,7 +381,7 @@ export default function ThroughTheirEyesPage() {
   return (
     <>
       {/* 项目页标题：清楚说明 Levey 项目已经完成。 */}
-      <section className="page-hero page-section wide-section">
+      <section className="page-hero page-section wide-section through-hero">
         <p className="kicker">Completed Project · Levey Day School</p>
         <h1>Through Their Eyes</h1>
         <p>
@@ -380,8 +390,18 @@ export default function ThroughTheirEyesPage() {
         </p>
       </section>
 
+      {/* 页面索引：用轻量目录建立田野档案的章节节奏。 */}
+      <section className="page-section wide-section archive-section-index">
+        <p className="kicker">Archive sections</p>
+        <ul aria-label="Through Their Eyes archive sections">
+          {archiveSections.map((section) => (
+            <li key={section}>{section}</li>
+          ))}
+        </ul>
+      </section>
+
       {/* 项目维度：用具体方法替代抽象说明。 */}
-      <section className="page-section wide-section project-dimensions">
+      <section className="page-section wide-section project-dimensions through-chapter">
         <div className="dimension-copy">
           <p className="kicker">How the Project Works</p>
           <h2>Five concrete dimensions</h2>
@@ -409,7 +429,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 研究问题：用一句话固定项目焦点。 */}
-      <section className="page-section wide-section quote-panel">
+      <section className="page-section wide-section quote-panel through-chapter through-chapter-quiet">
         <p className="kicker">Project Question</p>
         <p className="prominent-sentence">
           Instead of photographing children, I asked what children would photograph
@@ -422,8 +442,8 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 两个问题：保留 booklet 的 The Story / To Future 访谈结构。 */}
-      <section className="page-section wide-section two-questions">
-        <div className="section-heading">
+      <section className="page-section wide-section two-questions through-chapter">
+        <div className="section-heading through-section-heading">
           <p className="kicker">The Two Questions</p>
           <h2>Two questions, repeated slowly</h2>
           <p className="section-intro">
@@ -443,7 +463,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 方法流程：呈现从拍摄到 booklet 草稿的路径。 */}
-      <section className="page-section wide-section">
+      <section className="page-section wide-section method-flow-section through-chapter-compact">
         <p className="kicker">Method Flow</p>
         <div className="flow" aria-label="Project method flow">
           {methodFlow.map((step) => (
@@ -455,7 +475,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 材料与发现：把项目从视觉展示推进到研究档案。 */}
-      <section className="page-section wide-section research-blocks">
+      <section className="page-section wide-section research-blocks through-chapter-compact">
         <article className="research-list">
           <p className="kicker">Materials Collected</p>
           <ul>
@@ -475,8 +495,8 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 案例卡片：用 booklet 的 The Story / To Future 结构组织儿童解释。 */}
-      <section className="page-section wide-section">
-        <div className="section-heading">
+      <section className="page-section wide-section featured-cases-section through-chapter">
+        <div className="section-heading through-section-heading">
           <p className="kicker">Featured Research Cases</p>
           <h2>Five photographs, five explanations</h2>
           <p className="section-intro">
@@ -514,7 +534,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 完整画廊提示：在深度案例和完整档案之间建立阅读转场。 */}
-      <section className="page-section wide-section archive-divider-note">
+      <section className="page-section wide-section archive-divider-note through-chapter-marker">
         <p className="kicker">Entering the full archive</p>
         <p>
           The featured cases above introduce the method; the full gallery below preserves
@@ -523,8 +543,8 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 完整画廊：保留研究案例的深度，同时让访客浏览全部儿童摄影页。 */}
-      <section className="page-section wide-section full-gallery-section">
-        <div className="section-heading">
+      <section className="page-section wide-section full-gallery-section through-chapter">
+        <div className="section-heading through-section-heading">
           <p className="kicker">Complete Archive</p>
           <h2>Full Child-Led Gallery</h2>
           <p className="section-intro">
@@ -545,12 +565,12 @@ export default function ThroughTheirEyesPage() {
                 <p className="participant-line">
                   {item.name} · {item.age}
                 </p>
-                <dl>
-                  <div>
+                <dl className="gallery-archive-copy">
+                  <div className="gallery-story">
                     <dt>The Story</dt>
                     <dd>{item.story}</dd>
                   </div>
-                  <div>
+                  <div className="gallery-future">
                     <dt>To Future</dt>
                     <dd>{item.future}</dd>
                   </div>
@@ -562,8 +582,8 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 成人反馈：上层为摘要索引，下层为完整访谈摘录，兼顾阅读节奏与资料深度。 */}
-      <section className="page-section wide-section adult-reflections">
-        <div className="section-heading">
+      <section className="page-section wide-section adult-reflections through-chapter">
+        <div className="section-heading through-section-heading">
           <p className="kicker">Adult Interview Archive</p>
           <h2>Teacher and Family Reflections</h2>
           <p className="section-intro">
@@ -620,7 +640,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 小册子预览：以 PDF 草稿目录为基础，后续可加入 Canva 页面截图。 */}
-      <section className="page-section wide-section booklet-preview">
+      <section className="page-section wide-section booklet-preview through-chapter">
         <div>
           <p className="kicker">Booklet Preview</p>
           <h2>Through Their Eyes draft structure</h2>
@@ -641,7 +661,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* 后续方向：把单一项目连接到未来田野。 */}
-      <section className="page-section wide-section future-hook">
+      <section className="page-section wide-section future-hook through-chapter-quiet">
         <p className="kicker">What Comes Next</p>
         <h2>From one school community to future fieldwork</h2>
         <p>
@@ -652,7 +672,7 @@ export default function ThroughTheirEyesPage() {
       </section>
 
       {/* AI 与人类视觉：明确机器描述的边界。 */}
-      <section className="page-section wide-section ai-human">
+      <section className="page-section wide-section ai-human through-chapter-quiet">
         <div>
           <p className="kicker">AI vs Human Vision</p>
           <h2>AI can describe the object, but the child explains the relationship.</h2>
